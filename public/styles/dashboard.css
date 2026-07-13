@@ -1,0 +1,309 @@
+:root {
+    --bs-primary: #3b82f6;
+    --bs-success: #10b981;
+    --bs-dark: #1e293b;
+    --bs-light: #f8fafc;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+}
+
+/* ================= Sidebar ================= */
+.sidebar {
+    width: 60% !important;
+    background-color: var(--bs-dark);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+    display: none !important;
+    height: 100vh;
+}
+
+.sidebar.active {
+    display: flex !important;
+}
+
+.sidebar-collapsed {
+    width: 80px;
+}
+
+.sidebar-collapsed .nav-text {
+    display: none;
+}
+
+/* ================= Main ================= */
+.main {
+    transition: 0.3s;
+}
+
+/* ================= Card ================= */
+.card-custom {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-gradient {
+    background: linear-gradient(135deg, var(--bs-primary) 0%, #6366f1 100%);
+    color: white;
+}
+
+/* ================= Table ================= */
+.table-responsive {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: var(--bs-primary);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 16px 12px;
+}
+
+/* ================= Buttons ================= */
+.btn-primary-custom {
+    background-color: var(--bs-primary);
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+}
+
+.btn-primary-custom:hover {
+    background-color: #2563eb;
+}
+
+.filter-btn {
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+
+/* ================= Action Buttons ================= */
+.action-btn {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+
+.action-btn.edit {
+    background-color: rgba(66, 153, 225, 0.1);
+    color: var(--bs-primary);
+}
+
+.action-btn.delete {
+    background-color: rgba(245, 101, 101, 0.1);
+    color: #e53e3e;
+}
+
+.action-btn.view {
+    background-color: rgba(56, 178, 172, 0.1);
+    color: #38b2ac;
+}
+
+.action-btn.download {
+    background-color: rgba(66, 153, 225, 0.1);
+    color: var(--bs-primary);
+}
+
+/* ================= Chart ================= */
+.chart-container {
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+/* ================= Header ================= */
+header {
+    padding: 9px;
+}
+
+/* ================= Status Badge ================= */
+.status-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.status-available {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status-booked {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.status-maintenance {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+/* ================= Badges ================= */
+.badge-status {
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.badge-confirmed {
+    background-color: #e6fffa;
+    color: #38b2ac;
+}
+
+.badge-pending {
+    background-color: #fffaf0;
+    color: #ed8936;
+}
+
+.badge-cancelled {
+    background-color: #fff5f5;
+    color: #e53e3e;
+}
+
+.badge-completed {
+    background-color: #f0fff4;
+    color: #48bb78;
+}
+
+/* ================= Image Upload ================= */
+.profile-upload-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+
+.profile-upload-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.profile-upload-wrapper .edit-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: white;
+    border-radius: 50%;
+    padding: 5px 7px;
+    border: 1px solid #ccc;
+}
+
+.profile-upload-wrapper .edit-icon i {
+    color: #0d6efd;
+}
+
+.profile-upload-input {
+    display: none;
+}
+
+/* ================= Search ================= */
+.search-box {
+    border-radius: 20px;
+    padding-left: 40px;
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0;
+}
+
+/* ================= Divider ================= */
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: gray;
+}
+
+/* ================= Court Image ================= */
+.court-img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.table .court-img {
+    width: 60px;
+    height: 60px;
+}
+
+/* ================= Stats Cards ================= */
+.stats-card {
+    border-left: 4px solid;
+}
+
+.stats-card.total {
+    border-left-color: #2a4365;
+}
+
+.stats-card.confirmed {
+    border-left-color: #38b2ac;
+}
+
+.stats-card.pending {
+    border-left-color: #ed8936;
+}
+
+.stats-card.cancelled {
+    border-left-color: #e53e3e;
+}
+
+/* ================= Filter ================= */
+.date-filter {
+    background-color: white;
+    border-radius: 8px;
+    padding: 8px 12px;
+    border: 1px solid #e2e8f0;
+}
+
+@media screen and (min-width: 992px) {
+    .sidebar {
+        width: 256px !important;
+        position: sticky;
+        height: 100vh;
+        display: flex !important;
+    }
+    .sidebar.active {
+        display: none !important;
+    }
+    .humberger-2 {
+        display: none;
+    }
+}
